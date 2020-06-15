@@ -4,20 +4,35 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": "8.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SerenaK5073/CustomCommand.git"
+  },
+  "keywords": [],
+  "author": "Serena K.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SerenaK5073/CustomCommands/issues"
+  },
+  "homepage": "https://github.com/SerenaK5073/CustomCommands",
   "dependencies": {
     "ascii-table": "0.0.9",
-    "better-sqlite3": "^7.0.1",
+    "better-sqlite3": "^7.1.0",
     "common-tags": "^1.8.0",
     "discord.js": "^11.5.1",
-    "dotenv": "^8.0.0",
-    "enmap": "^5.2.4",
+    "dotenv": "^8.2.0",
+    "enmap": "^5.3.1",
     "express": "^4.17.1",
     "ffmpeg": "0.0.4",
-    "fs": "0.0.1-security",
-    "random-puppy": "^1.1.0"
+    "fs": "^0.0.2",
+    "random-puppy": "^1.1.0",
+    "node-fetch": "^2.6.0",
+    "graphql": "^15.1.0"
   }
 }

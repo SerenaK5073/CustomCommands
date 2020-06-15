@@ -2,7 +2,7 @@ const { RichEmbed } = require("discord.js");
 const { stripIndents } = require("common-tags");
 const { getMember, formatDate } = require("../../functions.js");
 const prefix = "|";
-const botname = `Custom Comamnds`
+const botname = `Custom Comamnds`;
 
 module.exports = {
   name: "help",
@@ -11,24 +11,39 @@ module.exports = {
   description: "Shows a list of commands.",
   usage: "[h]",
   run: (client, message, args) => {
+    const embed = new RichEmbed()
+      .setColor("#ff0000")
+      .setTimestamp()
+      .setFooter(message.author.username, message.author.displayAvatarURL)
+      .setTitle(`<:Verified:719534754927476766> Help Command <:Verified:719534754927476766>`)
+      .setDescription(`
+**Commands**
+*Here is a list of commands that we have on the bot as of this moment.*
 
-    message.channel.send(`**Basic Commands**
-> **Help** *Shows this command*
-> **Info** *Shows a little welcome message of the bot*
-> **Ping** *Shows the Latency of the bot. And API.*
-> **Premium** *Shows the premium command.*`);
+__**Info**__
+|help
+|h
 
-    message.channel.send(`**Modeartion**
-> **Ban** *Bans a user from the server*
-> **Kick** *Kicks a user from the server*
-> **Report** *Reports a user to the admins*
-> **Purge** *Pruges a set amount of messages.*`);
+__**Moderation**__
+|helpmod
+|helpm
+|hm
 
-    message.channel.send(`**FUN**
-> **RPS** *Plays a game of Rock // Paper // Scissors*
-> **Meme** *Shows a meme randomly picked from the internet*
-> **Love** *Shows how much the message input loves the mentioned user*
-> **gay** *Shows how gay you are or the mentioned user*
-> **tired** *Will show how tired the mentioned user is*`);
- }
-}
+__**Fun**__
+|helpfun
+|hf
+
+**NOTE**
+*These help commands displayed above will show you what commands are in that section. Helpfun & Hf are basically the same thing but they are shorted down for easy use.*
+
+<:warning:719530222105395221>**Bot Requirements**<:warning:719530222105395221>
+**Roles:** \`Staff CC\`, \`Moderation+\`, \`Administration+\`
+**Channels:** \`Reports\`
+
+<:info:719530221404946492>**Planned for the future**<:info:719530221404946492>
+*1. Ticket System*
+`)
+
+    message.channel.send(embed);
+  }
+};

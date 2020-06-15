@@ -1,9 +1,12 @@
+require("http").createServer(async (req,res) => { 
+  res.statusCode = 200; res.write("ok"); 
+  res.end(); }).listen(3000, () => console.log("Now listening on port 3000"));
+
 const { Client, Collection } = require("discord.js");
 const { config } = require("dotenv");
 const fs = require("fs");
 const prefix = "|";
-const keepAlive = require('./server');
-const version = "3.3.1"
+const version = "5.1"
 
 const client = new Client({
     disableEveryone: true
@@ -22,16 +25,24 @@ config({
     require(`./handler/${handler}`)(client);
 });
 
+
 client.on("ready", () => {
     console.log(`Hi, ${client.user.username} is now online!`);
 
     client.user.setPresence({
-        status: "dnd",
-        game: {
-            name: `Re-Did the |invite command! | Version: ${version}`,
-            type: "playing"
-        }
-    }); 
+        status: "dnd", game: { name: `Added the Poll Command | Version: ${version}`, type: "playing"}});
+    /*let statuses = [
+      `|help for more information! | Version ${version}`,
+      `Watching over ${client.guilds.size} Servers`,
+      `Watching over ${client.users.size} Users`,
+      `Added new command |poll - To make a simple poll!`,
+      
+      ]
+    
+    setInterval(function() {
+      let status = statuses[Math.floor(Math.random() * statuses.length)];
+      client.user.setPresence(status, {type: "WATCHING"});
+    })*/
 });
 
 client.on("message", async message => {
@@ -54,5 +65,3 @@ client.on("message", async message => {
 });
 
 client.login(process.env.TOKEN);
-
-keepAlive();
