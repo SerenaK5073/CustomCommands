@@ -1,17 +1,29 @@
 # CustomCommands
+Custom Commands is now a project of the past. This bot was coded by a team of 5 under the name "Lanzaned Ent." This team fell apart and so the bot got left for what it was at that state. The bot now isn't hosted for the public anymore and this repo has been sitting here for quite a while. So after a suggestion of "CloudBud#9737" It was decided that we can open this. How-ever there are a few things to know which you can find in the "Repo" Section of this readme file.
 
-Custom commands is my bot for the use of discord it is coded in V11.5.1 and I am not updating for the reason that I do not have the
-knowledge of the newer discord versions. If you think you can update the bot do so. But you can not use the bot and not credit me. There
-is serious copyright on my bot and has been. I have regitered also to the Top.gg website so we can prove it was my bot. We can prove this 
-also by the creation date of the application and also when it was refistered. Again do not copy my work and then proceed to not credit me 
-for it.
+- Regards,
+Serena K. - Bot Author / Developer
 
-# Contact
+# Repo
 
-Discord Server: "https://discord.gg/U28ErpM"
+This bot still runs the old 11.5.1 version of discord.js. So there are a few things you need which I'm not going to explain them all. Here is a step guide on how to install this.
 
-Discord Username: "Serena K.#4900"
+1. Install / Clone this repo to a folder of your liking.
+2. Open your text editor of liking I used [VSC](https://code.visualstudio.com/)
+3. Open the terminal and run the following commands.
+    1. npm init
+    2. npm i discord.js@11.5.1
+    3. npm i ascii-table ms fs urban common-tags dotenv random-puppy superagent moment
+    This should have the bot running. If not then it should throw an error on what is missing and you should probably install that if you want this to work.
 
-Youtube: "https://www.youtube.com/channel/UCmtegEmZl-AEqZ_fYiePGrA?view_as=subscriber"
 
-GitHub: "https://github.com/SerenaK5073"
+# Credit
+Discord: Serena K.#4900
+Discord.JS: https://discord.js.org/#/
+
+# Other
+Youtube: https://www.youtube.com/channel/UCmtegEmZl-AEqZ_fYiePGrA
+instagram: https://www.instagram.com/_.serena_king._/?hl=nl
+
+Solutions Inc. | http://solutionsinc.nl
+Solutions Inc. Discord | https://discord.gg/m7NrjgK42f
